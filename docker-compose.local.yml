@@ -1,7 +1,6 @@
 volumes:
   django_rest_app_local_postgres_data: {}
   django_rest_app_local_postgres_data_backups: {}
-  
 
 services:
   django:

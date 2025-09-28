@@ -1,0 +1,18 @@
+- cookiecutter gh:cookiecutter/cookiecutter-django
+- git init
+- git add .
+- git commit -m "initial commit"
+- git remote set-url origin https://github.com/lucjason/Django-REST-App.git
+- git push -u origin main
+- brew install postgresql@17 
+- brew services start postgresql@17
+- curl -LsSf https://astral.sh/uv/install.sh | sh 
+- uv venv
+- uv sync
+- createdb django_rest_app
+- docker compose -f docker-compose.local.yml build
+- docker compose -f docker-compose.local.yml up -d
+- docker compose -f docker-compose.local.yml run --rm django python manage.py migrate
+- docker compose -f docker-compose.local.yml run --rm django python manage.py createsuperuser
+- docker compose -f docker-compose.local.yml run --rm django uv lock
+- uvx pre-commit run --all-files --show-diff-on-failure
